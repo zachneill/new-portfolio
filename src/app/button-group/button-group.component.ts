@@ -27,6 +27,7 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 export class ButtonGroupComponent {
   hidden: boolean = false;
   initialAnimation: number = 2
+  backBtn: boolean = true;
   constructor(public global: Global) {
   }
 
@@ -35,9 +36,13 @@ export class ButtonGroupComponent {
       this.initialAnimation--
     } else {
       if (this.global.newImage === 'cliff'){
+        if (type === 'done'){
+          this.backBtn = false
+        }
         this.hidden = false
       } else {
         this.hidden = type !== 'start'
+        this.backBtn = true
       }
     }
   }
