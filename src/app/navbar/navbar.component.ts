@@ -6,6 +6,7 @@ import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 import {faGoogle} from "@fortawesome/free-brands-svg-icons";
 import {faDiscord} from "@fortawesome/free-brands-svg-icons";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -19,13 +20,14 @@ export class NavbarComponent {
   faGoogle = faGoogle
   faDiscord = faDiscord
   faInstagram = faInstagram
-  window: number = window.innerWidth;
 
-  constructor(public global: Global) {
+  constructor(public global: Global, public router: Router){
   }
 
   reset() {
-    this.global.imageName = 'cliff'
-    this.global.newScene = 'home'
+    if (this.global.imageName != 'cliff'){
+      this.global.changeImage('cliff')
+      this.router.navigate(["/"]).then();
+    }
   }
 }

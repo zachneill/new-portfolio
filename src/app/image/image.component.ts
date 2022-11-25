@@ -20,15 +20,21 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
           opacity: 1
         })
       ),
-      transition('open => *', [animate('1s ease-out')]),
-      transition('* => open', [animate('1s ease-in')])
+      transition('open => close', [animate('500ms ease-out')]),
+      transition('close => open', [animate('500ms ease-in')])
     ])]
 })
 export class ImageComponent {
-  fade: string = 'close'
-
+  initialAnimation: number = 4
   constructor(public global: Global) {
   }
 
-
+  handleOpen() {
+    if (this.initialAnimation !==0){
+      this.initialAnimation--
+      return 'close';
+    } else {
+      return 'open'
+    }
+  }
 }

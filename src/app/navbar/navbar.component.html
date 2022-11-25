@@ -2,10 +2,10 @@
   <mat-toolbar-row style="display: flex; justify-content: space-between">
     <button class="name" (click)="reset()"
             mat-button
-            routerLink="/"
             aria-label="home"><span class="mat-headline-2">Zach Neill</span>
     </button>
     <span class="icons">
+      <a class="home" mat-button type="button" (click)="reset()">home</a>
       <a mat-icon-button type="button" href="https://www.linkedin.com/in/zachneill/" target="_blank" aria-label="LinkedIn"><fa-icon [icon]="faLinkedin"></fa-icon></a>
       <a mat-icon-button type="button" href="https://github.com/zachneill" target="_blank" aria-label="GitHub"><fa-icon [icon]="faGithub"></fa-icon></a>
       <a mat-icon-button type="button" href="https://www.facebook.com/zach.neill.357" target="_blank" aria-label="Facebook"><fa-icon [icon]="faFacebook"></fa-icon></a>
