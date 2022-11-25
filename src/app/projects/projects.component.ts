@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Global} from "../global";
 
 @Component({
   selector: 'app-projects',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent {
+
+  constructor( public global: Global) {
+  }
 
 }

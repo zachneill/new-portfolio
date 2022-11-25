@@ -1,0 +1,7 @@
+<div [hidden]="hidden" class="buttons" [@fadeInOut]="this.global.newScene === 'home' ? 'close': 'open'"
+     (@fadeInOut.start)="onAnimation('start')" (@fadeInOut.done)="onAnimation('done')">
+  <h1 class="mat-headline-4 header">I'm Zach, <br> a software developer.</h1>
+  <h1><button type="button" (click)="changeScene('work')" mat-button routerLink="/work"><span class="mat-headline-4 button">work</span></button></h1>
+  <h1><button type="button" (click)="changeScene('about')" mat-button routerLink="/about"><span class="mat-headline-4 button">about</span></button></h1>
+  <h1><button type="button" (click)="changeScene('projects')" mat-button routerLink="/projects"><span class="mat-headline-4 button">projects</span></button></h1>
+</div>

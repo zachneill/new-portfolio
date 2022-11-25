@@ -11,6 +11,10 @@ import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
+import { ImageComponent } from './image/image.component';
+import { ButtonGroupComponent } from './button-group/button-group.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { HomeComponent } from './home/home.component';
     WorkComponent,
     AboutComponent,
     ProjectsComponent,
-    HomeComponent
+    HomeComponent,
+    ImageComponent,
+    ButtonGroupComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

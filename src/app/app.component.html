@@ -1,25 +1,6 @@
-<div class="background mat-typography app-frame basic-container">
-  <p><mat-toolbar style="justify-content: space-between">
-    <button
-      mat-button
-      routerLink="/"
-      aria-label="home"><span class="mat-headline-2">Zach Neill</span>
-    </button>
-    <button mat-button type="button" routerLink="/about" aria-label="About">About</button>
-  </mat-toolbar></p>
-  <div class="buttons">
-    <h1 class="mat-headline-4 header">I'm Zach, <br> a software developer.</h1>
-    <h1><button type="button" mat-button routerLink="/work"><span class="mat-headline-4 button">work</span></button></h1>
-    <h1><button type="button" mat-button routerLink="/about"><span class="mat-headline-4 button">about</span></button></h1>
-    <h1><button type="button" mat-button routerLink="/projects"><span class="mat-headline-4 button">projects</span></button></h1>
-  </div>
+<div class="background basic-container">
+  <app-image></app-image>
+  <app-navbar></app-navbar>
+  <app-button-group></app-button-group>
   <router-outlet></router-outlet>
-  <div class="outer-div">
-    <img src="/assets/cliff.png" alt="zach sitting wistfully on a cliff" class="inner-div" />
-  </div>
-<!--  <footer>-->
-<!--    <p class="footer">-->
-<!--      © {{fullYear}} Zach Neill-->
-<!--    </p>-->
-<!--  </footer>-->
 </div>
