@@ -15,6 +15,8 @@ import { ImageComponent } from './image/image.component';
 import { ButtonGroupComponent } from './button-group/button-group.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
+import {MatListModule} from "@angular/material/list";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
