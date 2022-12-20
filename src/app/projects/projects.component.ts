@@ -7,18 +7,21 @@ import {Global} from "../global";
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent {
-  image: string = 'bcvm';
+  project: string = 'bcvm';
 
   constructor( public global: Global) {
   }
 
   handleNext() {
-    if (this.image === 'bcvm'){
+    if (this.project === 'bcvm'){
       this.global.changeImage('sigbuild')
-      this.image = 'sigbuild'
-    } else if (this.image === 'sigbuild'){
+      this.project = 'sigbuild'
+    } else if (this.project === 'sigbuild'){
+      this.global.changeImage('autopilot')
+      this.project = 'autopilot'
+    } else if (this.project === 'autopilot'){
       this.global.changeImage('bcvm')
-      this.image = 'bcvm'
+      this.project = 'bcvm'
     }
   }
 }
